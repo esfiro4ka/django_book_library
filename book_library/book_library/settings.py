@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'books.apps.BooksConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,11 +79,11 @@ WSGI_APPLICATION = 'book_library.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        "NAME": os.environ["MYSQL_DATABASE"],
-        "USER": os.environ["MYSQL_USER"],
-        "PASSWORD": os.environ["MYSQL_PASSWORD"],
-        "HOST": os.environ["MYSQL_HOST"],
-        "PORT": os.environ["MYSQL_PORT"],
+        'NAME': os.environ['MYSQL_DATABASE'],
+        'USER': os.environ['MYSQL_USER'],
+        'PASSWORD': os.environ['MYSQL_PASSWORD'],
+        'HOST': os.environ['MYSQL_HOST'],
+        'PORT': os.environ['MYSQL_PORT'],
     }
 }
 
@@ -105,6 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "users.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
