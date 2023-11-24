@@ -14,7 +14,7 @@ class Book(models.Model):
         null=False,
         verbose_name='Имя автора'
     )
-    publishing_year = models.PositiveSmallIntegerField()(
+    publishing_year = models.PositiveSmallIntegerField(
         verbose_name='Год издания'
     )
     isbn = models.CharField(
