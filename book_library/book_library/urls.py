@@ -19,9 +19,10 @@ from django.urls import include, path
 
 apps_url_patterns = [
     path('', include('books.urls')),
+    path('', include('users.urls')),
 ]
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(route="api/v1/", view=include(apps_url_patterns)),
+    path(route='api/v1/', view=include(apps_url_patterns)),
 ]
