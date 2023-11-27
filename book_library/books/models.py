@@ -18,8 +18,10 @@ class Book(models.Model):
         verbose_name='Год издания'
     )
     isbn = models.CharField(
-        max_length=13,
+        max_length=17,
         unique=True,
+        blank=False,
+        null=False,
         verbose_name='ISBN'
     )
 
