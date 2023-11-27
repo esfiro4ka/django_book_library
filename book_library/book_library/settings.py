@@ -89,14 +89,14 @@ DATABASES = {
 
 # Celery
 
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = os.environ['CELERY_BROKER_URL']
+CELERY_RESULT_BACKEND = os.environ['CELERY_BROKER_URL']
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_STORE_ERRORS_EVEN_IF_IGNORED = True
 
-# email
+# Email
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ['EMAIL_HOST']
