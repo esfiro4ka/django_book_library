@@ -19,7 +19,7 @@
    ```bash
    touch infra/.env
    ```
-  Внесите в него значения переменных окружения (указанные ниже значения приведены для примера, вам необходимо ввести собственные данные):
+   Внесите в него значения переменных окружения (указанные ниже значения приведены для примера, вам необходимо ввести собственные данные):
 
    ```bash
         # Параметры Django:
@@ -43,17 +43,17 @@
         EMAIL_PORT=2525 # порт хоста электронной почты
         EMAIL_HOST_USER=mymail@mail.ru # имя пользователя
         EMAIL_HOST_PASSWORD=mypassword # пароль электронной почты для внешнего приложения
-      ```
+   ```
 
 5. Соберите Docker-образы и запустите контейнеры:
 
-   ```bash
-   docker-compose -f infra/docker-compose.yml build
-   ```
+    ```bash
+    docker-compose -f infra/docker-compose.yml build
+    ```
 
-   ```bash
-   docker-compose -f infra/docker-compose.yml up -d
-   ```
+    ```bash
+    docker-compose -f infra/docker-compose.yml up -d
+    ```
 
 6. После успешного запуска вы можете, например, создать книгу, отправив POST-запрос на [http://127.0.0.1:8000/api/v1/books/](http://127.0.0.1:8000/api/v1/books/)
 
@@ -66,7 +66,7 @@
     }
     ```
 
-Или зарегистрировать пользователя (предоставьте настоящую электронную почту), отправив POST-запрос на [http://127.0.0.1:8000/api/v1/users/registration/](http://127.0.0.1:8000/api/v1/users/registration/)
+    Или зарегистрировать пользователя (предоставьте настоящую электронную почту), отправив POST-запрос на [http://127.0.0.1:8000/api/v1/users/registration/](http://127.0.0.1:8000/api/v1/users/registration/)
 
     ```json
     {
@@ -79,5 +79,5 @@
 7. Вы можете остановить контейнеры с помощью команды:
 
    ```bash
-   docker-compose -f infra/docker-compose.yml down
+    docker-compose -f infra/docker-compose.yml down
    ```
